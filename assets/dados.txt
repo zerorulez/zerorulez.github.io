@@ -1,0 +1,15 @@
+Olá meu nome é Lucas Ribeiro, sou Desenvolvedor FrontEnd com experiência de mais de 5 anos e atuação e grandes agências.
+luc4s.rib3iro@gmail.com / www.github.com/zerorulez
+
+Escolaridade:
+Ensino superior incompleto: Sistemas de Informação - Universidade Bandeirantes  
+
+Especialidades:
+HTML5, CSS3, Bootstrap, Sass, JavaScript, Angular 6, Laravel, Nodejs, SEO e SQL.
+
+Fique à vontade para conhecer os meus projetos:
+Vli
+Mimmo
+Leilão sem Obras
+Shopping Villa-Lobos
+Anferplas
