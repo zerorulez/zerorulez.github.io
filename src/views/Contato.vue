@@ -28,7 +28,7 @@
         </ul>
       </div> -->
       
-      <div class="col-12d-flex align-items-center" ref="text">
+      <div class="col-12" ref="text">
         <h1 class="mb-3">ENTRE EM CONTATO</h1>
         <ul class="contato-list">
           <li>Se você gostou do meu trabalho, escreva pra mim.</li>
