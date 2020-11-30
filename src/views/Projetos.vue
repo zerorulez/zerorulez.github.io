@@ -8,6 +8,36 @@
               <div class="row">
                 <div class="col-12 col-lg-5 order-lg-2">
                   <div class="mockup-wrapper p-0 p-lg-3 mb-4 mb-lg-0" ref="image">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <video class="embed-responsive-item" controls>
+                        <source src="../assets/freefire.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <!-- <img src="../assets/cdf-desktop.png" alt="Mockup Copa do Fundão Fortnite Desktop" class="img-fluid desktop d-block desktop">
+                    <img src="../assets/cdf-mobile.png" alt="Mockup Copa do Fundão Fortnite Mobile" class="img-fluid desktop mobile d-none d-lg-block"> -->
+                  </div>
+                </div>
+                <div class="col-12 col-lg-7 d-flex align-items-center order-lg-1">
+                  <ul class="projeto-list">
+                    <li class="projeto-item">
+                      <h1>MUNDIAL DE FREE FIRE 2019</h1>
+                    </li>
+                    <li class="projeto-item" ref="about">
+                      <p>Colaborei na integração e automatização da API do jogo com a HUD e os gráficos utilizados durantes as transmissões. Utilizamos Node.js, Electron, Vue e PHP.</p>
+                    </li>
+                    <li class="projeto-item">
+                      <a href="https://www.youtube.com/watch?v=hZWzi54iUqY" target="_blank" class="btn-project">Ir para o vídeo ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </slide>
+          <slide>
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-lg-5 order-lg-2">
+                  <div class="mockup-wrapper p-0 p-lg-3 mb-4 mb-lg-0" ref="image">
                     <img src="../assets/cdf-desktop.png" alt="Mockup Copa do Fundão Fortnite Desktop" class="img-fluid desktop d-block desktop">
                     <img src="../assets/cdf-mobile.png" alt="Mockup Copa do Fundão Fortnite Mobile" class="img-fluid desktop mobile d-none d-lg-block">
                   </div>
@@ -129,6 +159,9 @@
             </div>
           </slide>
         </carousel>
+        <div class="mt-5">
+          <router-link class="btn-white-border mt-2" to="/sobre">SOBRE</router-link>
+        </div>
       </div>
     </div>
   </div>

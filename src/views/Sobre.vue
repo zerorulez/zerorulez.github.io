@@ -12,7 +12,41 @@
       </div>
       <div class="col-12 offset-lg-1 col-lg-4" ref="tecnologias">
         <h3 class="mb-4 mt-5 mt-lg-0 text-center"><strong>TECNOLOGIAS</strong></h3>
-        <carousel :per-page="1" :loop="true" :autoplay="true" :autoplayTimeout="2000" :paginationColor="'#f9f9f9'" :paginationActiveColor="'#5e5e5d'">
+        <ul class="tech-wrapper">
+          <li class="tech-item">
+            <img src="../assets/js.png" ref="image" alt="JavaScript Icon" class="img-fluid">
+            <p>JavaScript</p>
+          </li>
+          <li class="tech-item">
+            <img src="../assets/node.png" ref="image" alt="Node.js Icon" class="img-fluid">
+            <p>Node.js</p>
+          </li>
+          <li class="tech-item">
+            <img src="../assets/vue.png" ref="image" alt="Vue Icon" class="img-fluid">
+            <p>Vue</p>
+          </li>
+          <li class="tech-item">
+            <img src="../assets/angular.png" ref="image" alt="Angular Icon" class="img-fluid">
+            <p>Angular</p>
+          </li>
+          <li class="tech-item">
+            <img src="../assets/php.png" ref="image" alt="PHP Icon" class="img-fluid">
+            <p>PHP</p>
+          </li>
+          <li class="tech-item">
+            <img src="../assets/laravel.png" ref="image" alt="Laravel Icon" class="img-fluid">
+            <p>Laravel</p>
+          </li>
+          <li class="tech-item">
+            <img src="../assets/db.png" ref="image" alt="Database Icon" class="img-fluid">
+            <p>Banco de dados SQL e NoSQL</p>
+          </li>
+          <li class="tech-item">
+            <img src="../assets/seo.png" ref="image" alt="SEO Icon" class="img-fluid">
+            <p>SEO</p>
+          </li>
+        </ul>
+        <!-- <carousel :per-page="1" :loop="true" :autoplay="true" :autoplayTimeout="2000" :paginationColor="'#f9f9f9'" :paginationActiveColor="'#5e5e5d'">
           <slide>
             <ul class="skill-list">
               <li class="item">
@@ -93,7 +127,7 @@
               </li>
             </ul>
           </slide>
-        </carousel>
+        </carousel> -->
         <div class="d-block d-lg-none mt-5">
           <router-link class="btn-white-border mt-2" to="/contato">CONTATO</router-link>
         </div>
@@ -109,9 +143,23 @@
   }
   p {
     font-size: 18px;
+    margin: 0;
   }
   .skill-list {
     text-align: center;
+  }
+  .tech-wrapper {
+    .tech-item {
+      display: flex;
+      align-items: center;
+      padding: 5px 0;
+
+      img {
+        max-width: 40px;
+        max-height: 40px;
+        margin-right: 15px;
+      }
+    }
   }
 </style>
 

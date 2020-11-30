@@ -34,7 +34,7 @@
           <li>Se você gostou do meu trabalho, escreva pra mim.</li>
           <li></li>
           <li class="title">E-MAIL</li>
-          <li>luc4s.rib3iro@gmail.com</li>
+          <li>ribeirolucasdev@gmail.com</li>
           <li></li>
           <li class="title">LOCALIZAÇÃO</li>
           <li>São Paulo, Brasil</li>

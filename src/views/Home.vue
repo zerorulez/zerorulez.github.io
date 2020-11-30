@@ -15,7 +15,7 @@
           <ul class="list">
             <li class="secondary-color hello-world">OLÁ MUNDO</li>
             <li class="about" ref="about">
-              <h1>Meu nome é Lucas Ribeiro.<br />Eu sou um desenvolvedor pleno do Brasil.</h1>
+              <h1>Meu nome é Lucas Ribeiro.<br />Eu sou um desenvolvedor do Brasil.</h1>
             </li>
             <li class="cta mt-4">
               <div class="button">
