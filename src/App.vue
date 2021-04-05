@@ -10,21 +10,35 @@
     <div class="menu" ref="background">
       <ul class="menu-list" ref="menu">
         <li class="menu-item">
-          <router-link to="/">Home</router-link>
+          <a href="#home" @click="toogleMenu()">Home</a>
         </li>
         <li class="menu-item">
-          <router-link to="/projetos">Projetos</router-link>
+          <a href="#projetos" @click="toogleMenu()">Projetos</a>
         </li>
         <li class="menu-item">
-          <router-link to="/sobre">Sobre</router-link>
+          <a href="#sobre" @click="toogleMenu()">Sobre</a>
         </li>
         <li class="menu-item">
-          <router-link to="/contato">Contato</router-link>
+          <a href="#contato" @click="toogleMenu()">Contato</a>
         </li>
       </ul>
     </div>
     <div class="center-views">
-      <router-view/>
+      <full-page ref="fullpage" :options="options" id="fullpage">
+        <div class="section" id="home">
+          <Home />
+        </div>
+        <div class="section" id="projetos">
+          <Projetos />
+        </div>
+        <div class="section" id="sobre">
+          <Sobre />
+        </div>
+        <div class="section" id="contato">
+          <Contato />
+        </div>
+      </full-page>
+      <!-- <router-view/> -->
     </div>
   </div>
 </template>
@@ -40,6 +54,7 @@
   background-color: $background;
   color: $color;
   min-height: 100vh;
+  scroll-behavior: smooth !important;
 
   ul {
     list-style: none;
@@ -49,11 +64,16 @@
 }
 
 .center-views {
-  padding: 59px 0;
+  // padding: 59px 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  flex-direction: column;
+  .fp-tableCell { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 60px 0;
+  }
 }
 
 .btn-white-border {
@@ -96,9 +116,9 @@
 #nav {
   padding: 5px;
   position: fixed;
-  width: 100vw;
   text-align: right;
   z-index: 9999;
+  right: 0;
   
   .hamburger {
     .hamburger-box {
@@ -149,11 +169,22 @@
 <script>
 import { gsap, Power1 } from "gsap"
 
+import Home from './views/Home.vue'
+import Projetos from './views/Projetos.vue'
+import Sobre from './views/Sobre.vue'
+import Contato from './views/Contato.vue'
+
 export default {
   name: 'App',
   data() {
     return {
-      isActive: false
+      isActive: false,
+      options: {
+        // licenseKey: 'YOUR_KEY_HEERE',
+        // menu: '#menu',
+        // anchors: ['page1', 'page2', 'page3'],
+        // sectionsColor: ['#41b883', '#ff5f45', '#0798ec']
+      },
     }
   },
   mounted() {
@@ -214,6 +245,12 @@ export default {
       })
       
     }
+  },
+  components: {
+    Home,
+    Projetos,
+    Sobre,
+    Contato
   }
 }
 </script>

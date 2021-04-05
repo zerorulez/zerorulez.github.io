@@ -39,6 +39,7 @@
           <li class="title">LOCALIZAÇÃO</li>
           <li>São Paulo, Brasil</li>
         </ul>
+        <a class="btn-white-border mt-4" href="#home">Home</a>
       </div>
     </div>
   </div>

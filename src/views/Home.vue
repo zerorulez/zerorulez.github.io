@@ -3,7 +3,6 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-lg-5 order-lg-2 d-flex justify-content-center align-items-center mb-4 mb-lg-0">
-          <!-- <img src="../assets/terminal.png" alt="Terminal Icon" ref="image" class="img-fluid home-image"> -->
           <div class="terminal" ref="image">
             <div class="console">
               <span>></span>
@@ -19,7 +18,7 @@
             </li>
             <li class="cta mt-4">
               <div class="button">
-                <router-link to="/projetos" class="btn-white-border">MEUS PROJETOS</router-link>
+                <a href="#projetos" class="btn-white-border">MEUS PROJETOS</a>
               </div>
             </li>
           </ul>

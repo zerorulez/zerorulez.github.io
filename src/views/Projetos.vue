@@ -159,8 +159,8 @@
             </div>
           </slide>
         </carousel>
-        <div class="mt-5">
-          <router-link class="btn-white-border mt-2" to="/sobre">SOBRE</router-link>
+        <div class="mt-4">
+          <a class="btn-white-border" href="#sobre">SOBRE</a>
         </div>
       </div>
     </div>

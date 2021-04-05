@@ -6,7 +6,7 @@
           <h1>Lucas Ribeiro</h1>
           <p ref="about">Desde que comecei minha jornada como desenvolvedor há quase 10 anos, trabalhei para agências, consultei programadores experientes e colaborei com pessoas talentosas para criar produtos digitais para uso comercial e para consumidores. Sou naturalmente curioso e trabalho para resolver problemas, um de cada vez.</p>
           <div class="d-none d-lg-block">
-            <router-link class="btn-white-border mt-2" to="/contato">CONTATO</router-link>
+            <a class="btn-white-border mt-4" href="#contato">CONTATO</a>
           </div>
         </div>
       </div>
@@ -128,8 +128,8 @@
             </ul>
           </slide>
         </carousel> -->
-        <div class="d-block d-lg-none mt-5">
-          <router-link class="btn-white-border mt-2" to="/contato">CONTATO</router-link>
+        <div class="d-block d-lg-none mt-4">
+          <a class="btn-white-border" href="#contato">CONTATO</a>
         </div>
       </div>
     </div>
