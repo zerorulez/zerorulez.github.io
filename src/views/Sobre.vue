@@ -1,18 +1,26 @@
 <template>
   <div class="sobre container">
     <div class="row">
-      <div class="col-12 col-lg-7 d-flex align-items-center">
+      <div class="col-12 col-lg-7 d-flex">
         <div class="wrapper">
-          <h1>Lucas Ribeiro</h1>
+          <h2 ref="name"><strong>Lucas Ribeiro</strong></h2>
           <p ref="about">Desde que comecei minha jornada como desenvolvedor há quase 10 anos, trabalhei para agências, consultei programadores experientes e colaborei com pessoas talentosas para criar produtos digitais para uso comercial e para consumidores. Sou naturalmente curioso e trabalho para resolver problemas, um de cada vez.</p>
-          <div class="d-none d-lg-block">
+          <!-- <div class="">
             <a class="btn-white-border mt-4" href="#contato">CONTATO</a>
-          </div>
+          </div> -->
         </div>
       </div>
-      <div class="col-12 offset-lg-1 col-lg-4" ref="tecnologias">
-        <h3 class="mb-4 mt-5 mt-lg-0 text-center"><strong>TECNOLOGIAS</strong></h3>
-        <ul class="tech-wrapper">
+      <div class="col-12 offset-lg-1 col-lg-4 d-none d-md-block">
+        <h3 class="mb-4 mt-5 mt-lg-0 text-center" ref="conhecimentos"><strong>CONHECIMENTOS</strong></h3>
+        <ul class="tech-wrapper" ref="lista">
+          <li class="tech-item">
+            <!-- <img src="../assets/js.png" ref="image" alt="JavaScript Icon" class="img-fluid"> -->
+            <p>Programação Orientada a Objetos (OOP)</p>
+          </li>
+          <li class="tech-item">
+            <!-- <img src="../assets/js.png" ref="image" alt="JavaScript Icon" class="img-fluid"> -->
+            <p>Design Patterns</p>
+          </li>
           <li class="tech-item">
             <img src="../assets/js.png" ref="image" alt="JavaScript Icon" class="img-fluid">
             <p>JavaScript</p>
@@ -41,96 +49,7 @@
             <img src="../assets/db.png" ref="image" alt="Database Icon" class="img-fluid">
             <p>Banco de dados SQL e NoSQL</p>
           </li>
-          <li class="tech-item">
-            <img src="../assets/seo.png" ref="image" alt="SEO Icon" class="img-fluid">
-            <p>SEO</p>
-          </li>
         </ul>
-        <!-- <carousel :per-page="1" :loop="true" :autoplay="true" :autoplayTimeout="2000" :paginationColor="'#f9f9f9'" :paginationActiveColor="'#5e5e5d'">
-          <slide>
-            <ul class="skill-list">
-              <li class="item">
-                <img src="../assets/js.png" ref="image" alt="JavaScript Icon" class="img-fluid">
-              </li>
-              <li class="item pt-2">
-                JavaScript
-              </li>
-            </ul>
-          </slide>
-          <slide>
-            <ul class="skill-list">
-              <li class="item">
-                <img src="../assets/node.png" ref="image" alt="Node.js Icon" class="img-fluid">
-              </li>
-              <li class="item pt-2">
-                Node.js
-              </li>
-            </ul>
-          </slide>
-          <slide>
-            <ul class="skill-list">
-              <li class="item">
-                <img src="../assets/vue.png" ref="image" alt="Vue Icon" class="img-fluid">
-              </li>
-              <li class="item pt-2">
-                Vue
-              </li>
-            </ul>
-          </slide>
-          <slide>
-            <ul class="skill-list">
-              <li class="item">
-                <img src="../assets/angular.png" ref="image" alt="Angular Icon" class="img-fluid">
-              </li>
-              <li class="item pt-2">
-                Angular
-              </li>
-            </ul>
-          </slide>
-          <slide>
-            <ul class="skill-list">
-              <li class="item">
-                <img src="../assets/php.png" ref="image" alt="PHP Icon" class="img-fluid">
-              </li>
-              <li class="item pt-2">
-                PHP
-              </li>
-            </ul>
-          </slide>
-          <slide>
-            <ul class="skill-list">
-              <li class="item">
-                <img src="../assets/laravel.png" ref="image" alt="Laravel Icon" class="img-fluid">
-              </li>
-              <li class="item pt-2">
-                Laravel
-              </li>
-            </ul>
-          </slide>
-          <slide>
-            <ul class="skill-list">
-              <li class="item">
-                <img src="../assets/db.png" ref="image" alt="Database Icon" class="img-fluid">
-              </li>
-              <li class="item pt-2">
-                Banco de dados<br />SQL e NoSQL
-              </li>
-            </ul>
-          </slide>
-          <slide>
-            <ul class="skill-list">
-              <li class="item">
-                <img src="../assets/seo.png" ref="image" alt="SEO Icon" class="img-fluid">
-              </li>
-              <li class="item pt-2">
-                Otimização de<br />Motor de Busca
-              </li>
-            </ul>
-          </slide>
-        </carousel> -->
-        <div class="d-block d-lg-none mt-4">
-          <a class="btn-white-border" href="#contato">CONTATO</a>
-        </div>
       </div>
     </div>
   </div>
@@ -142,7 +61,7 @@
     font-weight: bold;
   }
   p {
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
   }
   .skill-list {
@@ -155,8 +74,8 @@
       padding: 5px 0;
 
       img {
-        max-width: 40px;
-        max-height: 40px;
+        max-width: 30px;
+        max-height: 30px;
         margin-right: 15px;
       }
     }
@@ -168,18 +87,71 @@ import { gsap, Power1 } from "gsap"
 
 export default {
   name: 'Sobre',
+  props: ['section'],
   mounted() {
-    const {about, tecnologias} = this.$refs
-    gsap.from(about, .7, {
-      y: 50,
-      opacity: 0,
-      ease: Power1.easeOut,
-    })
-    gsap.from(tecnologias, 1, {
-      y: -15,
-      opacity: 0,
-      ease: Power1.easeOut,
-    })
-  }
+  },
+  watch: {
+    section() {
+      const {name, about, conhecimentos, lista} = this.$refs
+      if (this.section == 'sobre') {
+        gsap.from(name, .7, {
+          y: 50,
+          ease: Power1.easeOut,
+        })
+        gsap.to(name, .7, {
+          opacity: 1,
+          ease: Power1.easeOut,
+        })
+
+        gsap.from(about, .7, {
+          y: 50,
+          delay: .2,
+          ease: Power1.easeOut,
+        })
+        gsap.to(about, .7, {
+          opacity: 1,
+          delay: .2,
+          ease: Power1.easeOut,
+        })
+
+        gsap.from(conhecimentos, .7, {
+          y: -50,
+          delay: .2,
+          ease: Power1.easeOut,
+        })
+        gsap.to(conhecimentos, .7, {
+          opacity: 1,
+          delay: .2,
+          ease: Power1.easeOut,
+        })
+
+        gsap.from(lista, .7, {
+          y: -50,
+          ease: Power1.easeOut,
+        })
+        gsap.to(lista, .7, {
+          opacity: 1,
+          ease: Power1.easeOut,
+        })
+      } else {
+        gsap.to(name, .7, {
+          opacity: 0,
+          ease: Power1.easeOut,
+        })
+        gsap.to(about, .7, {
+          opacity: 0,
+          ease: Power1.easeOut,
+        })
+        gsap.to(conhecimentos, .7, {
+          opacity: 0,
+          ease: Power1.easeOut,
+        })
+        gsap.to(lista, .7, {
+          opacity: 0,
+          ease: Power1.easeOut,
+        })
+      }
+    }
+  },
 }
 </script>

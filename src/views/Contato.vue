@@ -29,8 +29,8 @@
       </div> -->
       
       <div class="col-12" ref="text">
-        <h1 class="mb-3">ENTRE EM CONTATO</h1>
-        <ul class="contato-list">
+        <h1 class="mb-3" ref="title">ENTRE EM CONTATO</h1>
+        <ul class="contato-list" ref="list">
           <li>Se você gostou do meu trabalho, escreva pra mim.</li>
           <li></li>
           <li class="title">E-MAIL</li>
@@ -39,7 +39,7 @@
           <li class="title">LOCALIZAÇÃO</li>
           <li>São Paulo, Brasil</li>
         </ul>
-        <a class="btn-white-border mt-4" href="#home">Home</a>
+        <!-- <a class="btn-white-border mt-4" href="#home">Home</a> -->
       </div>
     </div>
   </div>
@@ -71,18 +71,46 @@ import { gsap, Power1 } from "gsap"
 
 export default {
   name: 'Contato',
+  props: ['section'],
   mounted() {
-    const {form, text} = this.$refs
-    gsap.from(text, .7, {
-      y: 50,
-      opacity: 0,
-      ease: Power1.easeOut,
-    })
-    gsap.from(form, 1, {
-      y: -10,
-      opacity: 0,
-      ease: Power1.easeOut,
-    })
+    
+  },
+  watch: {
+    section() {
+      const {title, list} = this.$refs
+
+      if (this.section == 'contato') {
+        gsap.from(title, .7, {
+          y: 50,
+          ease: Power1.easeOut,
+        })
+        gsap.to(title, .7, {
+          opacity: 1,
+          ease: Power1.easeOut,
+        })
+
+        gsap.from(list, .7, {
+          y: 50,
+          delay: .3,
+          ease: Power1.easeOut,
+        })
+        gsap.to(list, .7, {
+          opacity: 1,
+          delay: .3,
+          ease: Power1.easeOut,
+        })
+      } else {
+        gsap.to(title, .7, {
+          opacity: 0,
+          ease: Power1.easeOut,
+        })
+        gsap.to(list, .7, {
+          opacity: 0,
+          ease: Power1.easeOut,
+        })
+      }
+    }
   }
+  
 }
 </script>

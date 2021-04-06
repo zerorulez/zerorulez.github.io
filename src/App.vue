@@ -10,32 +10,38 @@
     <div class="menu" ref="background">
       <ul class="menu-list" ref="menu">
         <li class="menu-item">
-          <a href="#home" @click="toogleMenu()">Home</a>
+          <a href="#home" @click="toogleMenu(); $refs.fullpage.api.moveTo(1,0)">Home</a>
         </li>
         <li class="menu-item">
-          <a href="#projetos" @click="toogleMenu()">Projetos</a>
+          <a href="#projetos" @click="toogleMenu(); $refs.fullpage.api.moveTo(2,0)">Projetos</a>
         </li>
         <li class="menu-item">
-          <a href="#sobre" @click="toogleMenu()">Sobre</a>
+          <a href="#sobre" @click="toogleMenu(); $refs.fullpage.api.moveTo(3,0)">Sobre</a>
         </li>
         <li class="menu-item">
-          <a href="#contato" @click="toogleMenu()">Contato</a>
+          <a href="#contato" @click="toogleMenu(); $refs.fullpage.api.moveTo(4,0)">Contato</a>
         </li>
       </ul>
     </div>
     <div class="center-views">
       <full-page ref="fullpage" :options="options" id="fullpage">
-        <div class="section" id="home">
-          <Home />
+        <div class="section">
+          <Home :section="section"/>
+          <a class="btn-white-border mt-4 ml-3" href="#home" @click="$refs.fullpage.api.moveSectionDown()">Projetos</a>
         </div>
-        <div class="section" id="projetos">
-          <Projetos />
+        <div class="section">
+          <h1 class="pb-4"><strong>Projetos</strong></h1>
+          <Projetos :section="section"/>
+          <a class="btn-white-border mt-4 ml-3" href="#home" @click="$refs.fullpage.api.moveSectionDown()">Sobre</a>
         </div>
-        <div class="section" id="sobre">
-          <Sobre />
+        <div class="section">
+          <h1 class="pb-4"><strong>Sobre</strong></h1>
+          <Sobre :section="section"/>
+          <a class="btn-white-border mt-4 ml-3" href="#home" @click="$refs.fullpage.api.moveSectionDown()">Contato</a>
         </div>
-        <div class="section" id="contato">
-          <Contato />
+        <div class="section">
+          <Contato :section="section"/>
+          <a class="btn-white-border mt-4 ml-3" href="#home" @click="$refs.fullpage.api.moveTo(1,0)">Home</a>
         </div>
       </full-page>
       <!-- <router-view/> -->
@@ -73,6 +79,7 @@
     align-items: center;
     min-height: 100vh;
     padding: 60px 0;
+    flex-direction: column;
   }
 }
 
@@ -82,7 +89,7 @@
   padding: 7px 15px;
   color: $color;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   background-color: transparent;
   display: inline-block;
@@ -181,10 +188,12 @@ export default {
       isActive: false,
       options: {
         // licenseKey: 'YOUR_KEY_HEERE',
-        // menu: '#menu',
-        // anchors: ['page1', 'page2', 'page3'],
-        // sectionsColor: ['#41b883', '#ff5f45', '#0798ec']
+        menu: '#nav',
+        anchors: ['home', 'projetos', 'sobre', 'contato'],
+        sectionsColor: ['#343838', '#005f6b', '#008c9e', '#343838'],
+        afterLoad: this.afterLoad
       },
+      section: ''
     }
   },
   mounted() {
@@ -226,6 +235,10 @@ export default {
           ease: Power1.easeOut,
         })
       }
+    },
+    afterLoad(origin, destination, direction) {
+      console.log(origin, destination, direction)
+      this.section = destination.anchor
     }
   },
   watch : {

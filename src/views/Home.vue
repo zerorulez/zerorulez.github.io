@@ -12,29 +12,19 @@
         </div>
         <div class="col-12 col-lg-7 d-flex align-items-center">
           <ul class="list">
-            <li class="secondary-color hello-world">OLÁ MUNDO</li>
+            <li class="secondary-color hello-world" ref="hello"><h1><strong>OLÁ MUNDO</strong></h1></li>
             <li class="about" ref="about">
               <h1>Meu nome é Lucas Ribeiro.<br />Eu sou um desenvolvedor do Brasil.</h1>
-            </li>
-            <li class="cta mt-4">
-              <div class="button">
-                <a href="#projetos" class="btn-white-border">MEUS PROJETOS</a>
-              </div>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import '../assets/css/variables';
-  .home-image {
-   opacity: 0; 
-  }
   .list {
     li {
       margin-bottom: 5px;
@@ -42,18 +32,19 @@
     
     .hello-world {
       font-weight: bold;
+      opacity: 0;
     }
 
     .about {
-      opacity: 1;
-      
+      opacity: 0;
       h1 {
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 0;
       }
     }
   }
   .terminal {
+    opacity: 0;
     border-radius: 15px;
     width: 180px;
     height: 150px;
@@ -72,22 +63,13 @@ import { gsap, Power1, TimelineLite } from "gsap"
 
 export default {
   name: 'Home',
+  props: ['section'],
   data() {
     return {
     }
   },
   mounted() {
-    const { about, image, underline } = this.$refs
-    gsap.from(about, .7, {
-      y: 50,
-      opacity: 0,
-      ease: Power1.easeOut,
-    })
-    gsap.from(image, 1, {
-      y: -15,
-      opacity: 0,
-      ease: Power1.easeOut,
-    })
+    const { underline } = this.$refs
 
     const timeline = new TimelineLite({repeat: -1})
     timeline.to(underline, .3, {
@@ -95,8 +77,55 @@ export default {
     }).to(underline, .6, {
       alpha: 1,
     })
-
     
+  },
+  watch: {
+    section() {
+      const { hello, about, image } = this.$refs
+      if (this.section == 'home') {
+        gsap.from(hello, .7, {
+          y: 50,
+          ease: Power1.easeOut,
+        })
+        gsap.to(hello, .7, {
+          opacity: 1,
+        })
+
+        gsap.from(about, .7, {
+          y: 50,
+          delay: .2,
+          ease: Power1.easeOut,
+        })
+        gsap.to(about, .7, {
+          delay: .2,
+          opacity: 1,
+        })
+
+        gsap.from(image, .7, {
+          y: -50,
+          ease: Power1.easeOut,
+        })
+        gsap.to(image, .7, {
+          opacity: 1,
+        })
+        
+      } else {
+        gsap.to(hello, .7, {
+          opacity: 0,
+          ease: Power1.easeOut,
+        })
+
+        gsap.to(about, .7, {
+          opacity: 0,
+          ease: Power1.easeOut,
+        })
+
+        gsap.to(image, .7, {
+          opacity: 0,
+          ease: Power1.easeOut,
+        })
+      }
+    }
   },
   components: {
     // HelloWorld
