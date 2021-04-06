@@ -190,7 +190,7 @@ export default {
         // licenseKey: 'YOUR_KEY_HEERE',
         menu: '#nav',
         anchors: ['home', 'projetos', 'sobre', 'contato'],
-        sectionsColor: ['#343838', '#005f6b', '#008c9e', '#343838'],
+        sectionsColor: ['#272625', '#3f4040', '#5e5e5f', '#272625'],
         afterLoad: this.afterLoad
       },
       section: ''
