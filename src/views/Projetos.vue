@@ -8,6 +8,31 @@
               <div class="row">
                 <div class="col-12 col-lg-5">
                   <div class="mockup-wrapper p-0 p-lg-3 mb-4 mb-lg-0" ref="image">
+                    <img src="../assets/flakesdesktop.jpg" alt="Mockup Flakes Power Cup Desktop" class="img-fluid desktop d-block desktop">
+                    <img src="../assets/flakesmobile.jpg" alt="Mockup Flakes Power Cup Mobile" class="img-fluid desktop mobile d-none d-lg-block">
+                  </div>
+                </div>
+                <div class="col-12 col-lg-7 d-flex  order-lg-1">
+                  <ul class="projeto-list">
+                    <li class="projeto-item">
+                      <h3>FLAKES POWER CUP</h3>
+                    </li>
+                    <li class="projeto-item" ref="about">
+                      <p class="d-none d-md-block">Trabalhei no desenvolvimento do site Flakes Power Cup.</p>
+                    </li>
+                    <li class="projeto-item">
+                      <a href="https://flakespowercup.gg/" target="_blank" class="btn-project">Ir para o site ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </slide>
+          <slide>
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-lg-5">
+                  <div class="mockup-wrapper p-0 p-lg-3 mb-4 mb-lg-0" ref="image">
                     <img src="../assets/esports3.0desktop.jpg" alt="Mockup Esports 3.0 Desktop" class="img-fluid desktop d-block desktop">
                     <img src="../assets/esports3.0mobile.jpg" alt="Mockup Esports 3.0 Mobile" class="img-fluid desktop mobile d-none d-lg-block">
                   </div>
