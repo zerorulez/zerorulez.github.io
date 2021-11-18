@@ -21,7 +21,7 @@
                       <p class="d-none d-md-block">Trabalhei no desenvolvimento do site Flakes Power Cup.</p>
                     </li>
                     <li class="projeto-item">
-                      <a href="https://flakespowercup.gg/" target="_blank" class="btn-project">Ir para o site ></a>
+                      <a href="https://f9905b49.flakespowercup.pages.dev/" target="_blank" rel="noopener noreferrer" class="btn-project">Ir para o site ></a>
                     </li>
                   </ul>
                 </div>
@@ -46,7 +46,7 @@
                       <p class="d-none d-md-block">Colaborei no desenvolvimento do site Esports 3.0.</p>
                     </li>
                     <li class="projeto-item">
-                      <a href="https://esports30.bbl.gg/" target="_blank" class="btn-project">Ir para o site ></a>
+                      <a href="https://esports30.bbl.gg/" target="_blank" rel="noopener noreferrer" class="btn-project">Ir para o site ></a>
                     </li>
                   </ul>
                 </div>
@@ -76,7 +76,7 @@
                       <p class="d-none d-md-block">Colaborei na integração e automatização da API do jogo com a HUD.</p>
                     </li>
                     <li class="projeto-item">
-                      <a href="https://www.youtube.com/watch?v=hZWzi54iUqY" target="_blank" class="btn-project">Ir para o vídeo ></a>
+                      <a href="https://www.youtube.com/watch?v=hZWzi54iUqY" target="_blank" rel="noopener noreferrer" class="btn-project">Ir para o vídeo ></a>
                     </li>
                   </ul>
                 </div>
@@ -99,9 +99,6 @@
                     </li>
                     <li class="projeto-item" ref="about">
                       <p class="d-none d-md-block">Colaborei no desenvolvimento do site do campeonato de Fortnite chamado Copa do Fundão.</p>
-                    </li>
-                    <li class="projeto-item">
-                      <a href="https://cdf.gg/" target="_blank" class="btn-project">Ir para o site ></a>
                     </li>
                   </ul>
                 </div>
@@ -126,7 +123,7 @@
                       <p class="d-none d-md-block">Colaborei no desenvolvimento dos sites de shoppings da BRMALLS.</p>
                     </li>
                     <li class="projeto-item">
-                      <a href="https://www.shoppingtambore.com.br/" target="_blank" class="btn-project">Ir para o site ></a>
+                      <a href="https://www.shoppingtambore.com.br/" target="_blank" rel="noopener noreferrer" class="btn-project">Ir para o site ></a>
                     </li>
                   </ul>
                 </div>
@@ -151,7 +148,7 @@
                       <p class="d-none d-md-block">Desenvolvimento de todo o site do Mimmo.</p>
                     </li>
                     <li class="projeto-item">
-                      <a href="http://www.mimmo.com.br/" target="_blank" class="btn-project">Ir para o site ></a>
+                      <a href="http://www.mimmo.com.br/" target="_blank" rel="noopener noreferrer" class="btn-project">Ir para o site ></a>
                     </li>
                   </ul>
                 </div>
@@ -176,7 +173,7 @@
                       <p class="d-none d-md-block">Desenvolvimento de todo o site da Anferplás.</p>
                     </li>
                     <li class="projeto-item">
-                      <a href="http://www.anferplas.com.br/" target="_blank" class="btn-project">Ir para o site ></a>
+                      <a href="http://www.anferplas.com.br/" target="_blank" rel="noopener noreferrer" class="btn-project">Ir para o site ></a>
                     </li>
                   </ul>
                 </div>
@@ -201,7 +198,7 @@
                       <p class="d-none d-md-block">Desenvolvimento de todo o site do Memórias de Coretos. Utilizando HTML5 e CSS3 para o front-end.</p>
                     </li>
                     <li class="projeto-item">
-                      <a href="http://memoriasdecoretos.com.br/" target="_blank" class="btn-project">Ir para o site ></a>
+                      <a href="http://memoriasdecoretos.com.br/" target="_blank" rel="noopener noreferrer" class="btn-project">Ir para o site ></a>
                     </li>
                   </ul>
                 </div>
